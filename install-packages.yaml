@@ -1,0 +1,13 @@
+---
+- name: test a playbook
+  hosts: all
+  #become: true
+  tasks:
+  - name: install package
+    yum: 
+      name: git 
+      state: installed
+  - name: uninstall package
+    yum:
+     name: git
+     state: removed
